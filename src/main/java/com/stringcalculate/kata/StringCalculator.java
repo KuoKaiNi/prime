@@ -11,9 +11,7 @@ public class StringCalculator {
 		
 		numbers = numbers.replaceAll("\n", ",");
 		
-		if (numbers.indexOf(",,") >= 0){
-			throw new RuntimeException("the  input is NOT ok");
-		}
+		valideInput(numbers);
 		
 		String[] args = numbers.split(",");
 		
@@ -22,6 +20,12 @@ public class StringCalculator {
 		}
 		
 		return result;
+	}
+
+	private void valideInput(String numbers) {
+		if (numbers.indexOf(",,") >= 0){
+			throw new RuntimeException("the  input is NOT ok");
+		}
 	}
 
 }
