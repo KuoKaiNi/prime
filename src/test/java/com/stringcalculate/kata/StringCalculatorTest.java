@@ -12,15 +12,17 @@ public class StringCalculatorTest {
 	
 	@Before
 	public void setUp() throws Exception {
+		calculator = new StringCalculator();
 	}
 
 	@After
 	public void tearDown() throws Exception {
+		calculator = null;
 	}
 
 	@Test
-	public void test() {
-		fail("Not yet implemented");
+	public void testEmptyString() {
+		int result = calculator.add("");
 	}
 
 }
