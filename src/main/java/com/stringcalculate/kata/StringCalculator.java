@@ -9,6 +9,8 @@ public class StringCalculator {
 			return result;
 		}
 		
+		numbers = numbers.replaceAll("\n", ",");
+		
 		String[] args = numbers.split(",");
 		
 		for (String parameter : args){
