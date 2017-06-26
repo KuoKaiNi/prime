@@ -25,5 +25,11 @@ public class StringCalculatorTest {
 		int result = calculator.add("");
 		assertEquals(0, result);
 	}
+	
+	@Test
+	public void testOneString(){
+		int result = calculator.add("1");
+		assertEquals(1, result);
+	}
 
 }
