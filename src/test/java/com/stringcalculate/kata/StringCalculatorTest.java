@@ -54,5 +54,11 @@ public class StringCalculatorTest {
 	public void testAllowTheAddMethodToHandleNewLinesBetweenNumbersNotOK(){
 		int result = calculator.add("1,\n");
 	}
+	
+	@Test
+	public void testSupportDifferentDelimiters(){
+		int result = calculator.add("//;\n1;2");
+		assertEquals(3, result);
+	}
 
 }
