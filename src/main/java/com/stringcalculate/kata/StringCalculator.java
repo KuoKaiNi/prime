@@ -9,13 +9,25 @@ public class StringCalculator {
 			return result;
 		}
 		
-		numbers = numbers.replaceAll("\n", ",");
+		String split = ",";
+		
+		if (numbers.indexOf("//") == 0){
+			split = numbers.substring(2, 3);
+			numbers = numbers.substring(3);
+		}
+		
+		numbers = numbers.replaceAll("\n", split);
 		
 		valideInput(numbers);
 		
-		String[] args = numbers.split(",");
+		String[] args = numbers.split(split);
 		
 		for (String parameter : args){
+			
+			if (parameter.isEmpty()){
+				parameter = "0";
+			}
+			
 			result += Integer.parseInt(parameter);
 		}
 		
