@@ -3,7 +3,6 @@ package com.stringcalculate.kata;
 public class StringCalculator {
 
 	public int add(String numbers) {
-		// TODO Auto-generated method stub
 		int result = 0;
 		
 		if (numbers.isEmpty()){
