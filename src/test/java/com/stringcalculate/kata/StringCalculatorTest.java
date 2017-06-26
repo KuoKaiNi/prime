@@ -49,5 +49,10 @@ public class StringCalculatorTest {
 		int result = calculator.add("1\n2,3");
 		assertEquals(6, result);
 	}
+	
+	@Test (expected = Exception.class) 
+	public void testAllowTheAddMethodToHandleNewLinesBetweenNumbersNotOK(){
+		int result = calculator.add("1,\n");
+	}
 
 }
