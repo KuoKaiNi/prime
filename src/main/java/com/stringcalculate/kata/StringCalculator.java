@@ -4,10 +4,19 @@ public class StringCalculator {
 
 	public int add(String numbers) {
 		// TODO Auto-generated method stub
+		int result = 0;
+		
 		if (numbers.isEmpty()){
-			return 0;
+			return result;
 		}
-		return Integer.parseInt(numbers);
+		
+		String[] args = numbers.split(",");
+		
+		for (String parameter : args){
+			result += Integer.parseInt(parameter);
+		}
+		
+		return result;
 	}
 
 }
