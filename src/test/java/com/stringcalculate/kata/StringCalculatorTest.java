@@ -23,6 +23,7 @@ public class StringCalculatorTest {
 	@Test
 	public void testEmptyString() {
 		int result = calculator.add("");
+		assertEquals(0, result);
 	}
 
 }
