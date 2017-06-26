@@ -2,7 +2,7 @@ package com.stringcalculate.kata;
 
 public class StringCalculator {
 
-	public int add(String numbers) {
+	public int add(String numbers) throws RuntimeException {
 		int result = 0;
 		
 		if (numbers.isEmpty()){
@@ -10,6 +10,10 @@ public class StringCalculator {
 		}
 		
 		numbers = numbers.replaceAll("\n", ",");
+		
+		if (numbers.indexOf(",,") >= 0){
+			throw new RuntimeException("the  input is NOT ok");
+		}
 		
 		String[] args = numbers.split(",");
 		

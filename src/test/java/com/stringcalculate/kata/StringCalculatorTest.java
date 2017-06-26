@@ -50,7 +50,7 @@ public class StringCalculatorTest {
 		assertEquals(6, result);
 	}
 	
-	@Test (expected = Exception.class) 
+	@Test (expected = RuntimeException.class)
 	public void testAllowTheAddMethodToHandleNewLinesBetweenNumbersNotOK(){
 		int result = calculator.add("1,\n");
 	}
