@@ -8,6 +8,8 @@ import org.junit.Test;
 
 public class StringCalculatorTest {
 	
+	private StringCalculator calculator;
+	
 	@Before
 	public void setUp() throws Exception {
 	}
