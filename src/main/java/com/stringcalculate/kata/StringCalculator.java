@@ -41,7 +41,7 @@ public class StringCalculator {
 
 	private void valideInput(String numbers) {
 		if (numbers.indexOf(",,") >= 0){
-			throw new RuntimeException("the  input is NOT ok");
+			throw new RuntimeException("the input is NOT ok");
 		}
 	}
 
