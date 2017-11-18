@@ -21,7 +21,6 @@ public class StringCalculator {
 	}
 	
 	public int add(String numbers) throws RuntimeException {
-		int result = 0;
 		numbers = parserEmptyString(numbers);
 		numbers = setupDefaultSplit(numbers);
 		numbers = numbers.replaceAll("\n", split);
